@@ -1,0 +1,95 @@
+:root {
+}
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  min-width: 290px;
+  color: #4d4e53;
+  background-color: #ffffff;
+  font-family: "Open Sans", Arial, sans-serif;
+  line-height: 1.5;
+}
+
+.container {
+  /* padding: 0 1rem; */
+}
+h3 {
+  border-top: 1px solid #aaa;
+  padding: 0.9rem 1rem;
+  margin: 0;
+}
+
+/* h3::before{
+    content: '> ';
+    font-size: 1em;
+} */
+.description {
+  font-weight: 400;
+  margin: 1rem 0 0 1rem;
+  /* padding: 1rem; */
+}
+.details {
+  padding: 1rem;
+}
+
+li {
+  /* line-height: 2; */
+  margin: 1rem 0 0 0;
+}
+
+.code {
+  background-color: #ddd;
+  margin: 1rem 2rem auto 2rem;
+  /* padding: 1rem; */
+  /* padding: auto 2rem; */
+  height: 2rem;
+}
+
+header {
+  /* width: 100%; */
+  background-color: #eee;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+header h1 {
+  margin: 0;
+  width: 100%;
+}
+
+.topic {
+  height: 40vh;
+  overflow-y: scroll;
+  border: 2px solid #4d4e53;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+@media screen and (min-width: 670px) {
+  .container {
+    display: grid;
+
+    grid-template-columns: 300px 1fr;
+    grid-template-areas: "header details";
+    grid-gap: 10px;
+  }
+  header {
+    grid-area: header;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  .topic {
+    grid-area: topic;
+    height: 100vh;
+  }
+  .details {
+    grid-area: details;
+    margin-left: 1rem;
+  }
+}
